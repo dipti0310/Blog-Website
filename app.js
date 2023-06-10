@@ -73,13 +73,6 @@ res.redirect("/");
   });
 })
 
-const deleteBlog=()=>{
-
-}
-const clicked=()=>{
-  console.log("CLEICKED---------------------------------------------------------------------------------")
-}
-
 app.post("/delete/:postId",async function(req,res){
   let postId = req.params.postId;
   console.log(postId);
