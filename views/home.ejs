@@ -6,8 +6,11 @@
 
 <%  list.forEach(function(item){   %>
 <%    console.log(item.title);   %>
-<h1><%=item.title%></h1>
-<p><%=item.blog.substring(0,100)%>... <a href="/posts/<%=item._id%>">Read More</a></p>
+<h1><%=item.title%> </h1>
+<form action="/delete/<%=item._id%>" method="post">
+    <button onclick="clicked"><i class="material-icons">delete</i></button>
+</form>
+<p><%=item.blog.substring(0,300)%>... <a href="/posts/<%=item._id%>">Read More</a></p>
 <%   });   %>
 
 <%- include("partials/footer") -%>
